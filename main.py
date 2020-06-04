@@ -20,7 +20,7 @@ except:
 
     sauce = urlopen(req, timeout=10).read()
 
-    #Dump da instancia para não estar sempre a fazer request (TEST CASES ONLY)
+    #Serialize request instance (TEST CASE ONLY)
     with open(data_pickle_path , "wb") as f:
         pickle.dump((sauce), f)
 
@@ -36,7 +36,7 @@ soup = bs.BeautifulSoup(sauce,'lxml') #create soup object from the extracted sou
 
 
 
-#Exemplos Soup Functionalities
+#Example Soup Functionalities
 #--------------------------------------
 # print(soup.title.text) 
 
